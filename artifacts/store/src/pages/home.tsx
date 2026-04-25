@@ -116,6 +116,26 @@ export default function Home() {
             <li>You get redirected back here and the premium content unlocks.</li>
           </ol>
         </section>
+
+        <section className="mt-8 rounded-2xl border border-violet-300 bg-gradient-to-br from-violet-50 to-fuchsia-50 p-6">
+          <div className="flex items-center justify-between gap-4">
+            <div>
+              <h3 className="text-lg font-semibold text-slate-900">
+                Neural Survival: Fracture Realm
+              </h3>
+              <p className="mt-1 text-sm text-slate-600">
+                Play the game. Unlock 6 premium heroes for ₱29 each — saved
+                permanently to your profile.
+              </p>
+            </div>
+            <a
+              href="/game/"
+              className="inline-flex items-center justify-center rounded-lg bg-violet-700 px-5 py-3 text-sm font-medium text-white hover:bg-violet-800 whitespace-nowrap"
+            >
+              Play Game
+            </a>
+          </div>
+        </section>
       </main>
     </div>
   );

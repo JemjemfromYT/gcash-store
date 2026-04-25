@@ -26,9 +26,31 @@ if (!basePath) {
   );
 }
 
+// Plugin: rewrite "/game/" (no trailing file) -> "/game/index.html" so the
+// Vite SPA fallback doesn't swallow the static game folder served from public/.
+function gameStaticFallback() {
+  return {
+    name: "game-static-fallback",
+    configureServer(server: import("vite").ViteDevServer) {
+      server.middlewares.use((req, _res, next) => {
+        if (req.url) {
+          if (req.url === "/game" || req.url === "/game/") {
+            req.url = "/game/index.html";
+          } else if (req.url.startsWith("/game/?")) {
+            req.url = "/game/index.html?" + req.url.slice("/game/?".length);
+          }
+        }
+        next();
+      });
+    },
+  };
+}
+
 export default defineConfig({
   base: basePath,
+  appType: "spa",
   plugins: [
+    gameStaticFallback(),
     react(),
     tailwindcss(),
     runtimeErrorOverlay(),

@@ -18,12 +18,23 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 
 ## Artifacts
 
-- **store** (`/`) — React+Vite storefront with a Buy button that creates a PayMongo checkout session (GCash, card, Maya). Pages: `/`, `/success`, `/cancel`, `/premium`. Premium unlock state is stored in `localStorage` after returning from the success URL.
-- **api-server** (`/api`) — Express backend. `POST /api/create-checkout` calls the PayMongo checkout API using `PAYMONGO_SECRET_KEY` and returns `{ checkoutUrl }`.
+- **store** (`/`) — React+Vite storefront with a Buy button that creates a PayMongo checkout session (GCash, card, Maya). Pages: `/`, `/success`, `/cancel`, `/premium`. Premium unlock state stored in `localStorage` after returning from success URL.
+  - **Game** (`/game/`) — Static HTML game *Neural Survival: Fracture Realm* served from `public/game/`. The Vite SPA fallback is bypassed for `/game/` via a custom middleware in `vite.config.ts` so the static `index.html` is served directly. Includes `heroes-dlc.js` which adds 6 paid heroes (justin/jian/joseph/jaballas/joshua/jazmine), a Name+PIN profile system, lock badges, and PayMongo checkout integration.
+- **api-server** (`/api`) — Express backend.
+  - `POST /api/create-checkout` — site-wide premium unlock checkout.
+  - `POST /api/profile/login` `{name, pin}` — creates or authenticates a profile (PIN bcrypt-hashed). Returns `{name, unlockedHeroes}`.
+  - `POST /api/heroes/checkout` `{name, pin, heroId}` — ₱29 PayMongo checkout for one hero. Success URL redirects to `/game/?paid=true&hero=<id>`.
+  - `POST /api/heroes/unlock` `{name, pin, heroId}` — marks a hero unlocked on the profile (called by client after redirect).
+
+## Database
+
+- **profiles** table (`lib/db/src/schema/profiles.ts`): `id`, `name` (unique), `pinHash` (bcrypt), `unlockedHeroes` (text[]), `createdAt`. Push schema with `pnpm --filter @workspace/db run push`.
 
 ## Required Secrets
 
 - `PAYMONGO_SECRET_KEY` — PayMongo API secret (test `sk_test_...` or live `sk_live_...`).
+- `SESSION_SECRET` — used by api-server.
+- `DATABASE_URL` — auto-provisioned Postgres.
 
 ## Key Commands
 
