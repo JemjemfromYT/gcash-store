@@ -16,6 +16,15 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - **API codegen**: Orval (from OpenAPI spec)
 - **Build**: esbuild (CJS bundle)
 
+## Artifacts
+
+- **store** (`/`) — React+Vite storefront with a Buy button that creates a PayMongo checkout session (GCash, card, Maya). Pages: `/`, `/success`, `/cancel`, `/premium`. Premium unlock state is stored in `localStorage` after returning from the success URL.
+- **api-server** (`/api`) — Express backend. `POST /api/create-checkout` calls the PayMongo checkout API using `PAYMONGO_SECRET_KEY` and returns `{ checkoutUrl }`.
+
+## Required Secrets
+
+- `PAYMONGO_SECRET_KEY` — PayMongo API secret (test `sk_test_...` or live `sk_live_...`).
+
 ## Key Commands
 
 - `pnpm run typecheck` — full typecheck across all packages
