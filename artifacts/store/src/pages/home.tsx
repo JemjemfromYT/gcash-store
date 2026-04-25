@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "wouter";
 
-const PREMIUM_PRICE = 50;
+const PREMIUM_PRICE = 1;
 const PREMIUM_NAME = "Premium Item";
 
 export default function Home() {
