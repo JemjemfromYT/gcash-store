@@ -14,11 +14,11 @@ window.onunhandledrejection = (event) => console.error("ASYNC ERROR:", event.rea
 
 // ---------- Hero defs ----------
 const HEROES = {
-  james: { name:"James", role:"Sword Tank",   img:"images/heroes/james.png",  hp:500, speed:200, dmg:30, atkCd:0.45, range:100,  abi:"Whirlwind",   abiCd:7,  color:"#22e8ff", desc:"High HP melee bruiser. Strong cleaving sword and a 360° whirlwind that staggers and damages." },
+  james: { name:"James", role:"Sword Tank",   img:"images/heroes/james.png",  hp:1000, speed:270, dmg:100, atkCd:0.30, range:100,  abi:"Whirlwind",   abiCd:7,  color:"#22e8ff", desc:"High HP melee bruiser. Strong cleaving sword and a 360° whirlwind that staggers and damages." },
   jake:  { name:"Jake",  role:"Wand Mage",    img:"images/heroes/jake.png",   hp:95,  speed:215, dmg:22, atkCd:0.85, range:520, abi:"Arcane Nova", abiCd:8,  color:"#ff2bd6", desc:"Slow, powerful magic missiles. Q unleashes a violet nova that detonates outward in a ring." },
   joross:{ name:"Joross",role:"Plasma Gunner",img:"images/heroes/joross.png", hp:70, speed:225, dmg:9,  atkCd:0.10, range:480, abi:"Suppress",    abiCd:6,  color:"#ff8a3d", desc:"Continuous plasma fire. Q triples fire-rate for 3s and pierces lightly armored foes." },
   jeb:   { name:"Jeb",   role:"Cross Healer", img:"images/heroes/jeb.png",    hp:110, speed:215, dmg:14, atkCd:0.55, range:380, abi:"Sanctum",     abiCd:9,  color:"#3dffb0", desc:"Holy bolts and a healing zone." },
-  jeff:  { name:"Jeff",  role:"Assassin",     img:"images/heroes/jeff.png",   hp:270,  speed:320, dmg:70, atkCd:0.35, range:80,  abi:"Phase Slash", abiCd:5,  color:"#ff3d6a", desc:"Glass cannon. Tiny HP, blinding speed, lethal twin daggers." },
+  jeff:  { name:"Jeff",  role:"Assassin",     img:"images/heroes/jeff.png",   hp:500,  speed:340, dmg:70, atkCd:0.50, range:80,  abi:"Phase Slash", abiCd:5,  color:"#ff3d6a", desc:"Glass cannon. Tiny HP, blinding speed, lethal twin daggers." },
 };
 const HERO_IDS = Object.keys(HEROES);
 

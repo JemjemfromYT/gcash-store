@@ -50,14 +50,14 @@
     jian: {
       name: 'Jian', role: 'Laser Lance',
       img: 'images/heroes/jian.jpg',
-      hp: 95, speed: 225, dmg: 2, atkCd: 0, range: 540,
+      hp: 95, speed: 225, dmg: 1, atkCd: 0, range: 540,
       abi: 'Overcharge', abiCd: 9, color: '#22e8ff',
       desc: 'Hitscan laser lance — instant beam to your aim. Q overcharges into a wide, piercing megabeam.'
     },
     joseph: {
       name: 'Joseph', role: 'Reaper',
       img: 'images/heroes/joseph.jpg',
-      hp: 400, speed: 250, dmg: 48, atkCd: 0.55, range: 260,
+      hp: 500, speed: 290, dmg: 100, atkCd: 0.70, range: 260,
       abi: 'Soul Harvest', abiCd: 8, color: '#a020f0',
       desc: 'Heavy melee scythe with a wide cleave arc. Q rips souls from all nearby enemies, healing for each kill.'
     },
@@ -66,7 +66,7 @@
       img: 'images/heroes/jaballas.jpg',
       hp: 140, speed: 210, dmg: 50, atkCd: 1.5, range: 300,
       abi: 'Slug Round', abiCd: 7, color: '#ff5577',
-      desc: '6-pellet shotgun spread shreds at close range. Q fires a heavy slug round that pierces every enemy in a line.'
+      desc: '9-pellet shotgun spread shreds at close range. Q fires a heavy slug round that pierces every enemy in a line.'
     },
     joshua: {
       name: 'Joshua', role: 'Marksman Archer',
@@ -78,7 +78,7 @@
     jazmine: {
       name: 'Jazmine', role: 'Plasma Witch',
       img:'images/heroes/jazmine.jpg',
-      hp: 100, speed: 120, dmg: 130, atkCd: 0.12, range: 460,
+      hp: 100, speed: 120, dmg: 130, atkCd: 3, range: 760,
       abi: 'Plasma Storm', abiCd: 8, color: '#ff80df',
       desc: 'Rapid-fire plasma orbs at incredible attack speed. Q releases a 16-orb plasma storm in a wide ring.'
     },
@@ -516,7 +516,7 @@
         spawnBullet({
           x: p.x+Math.cos(ang)*20, y: p.y+Math.sin(ang)*20,
           vx: Math.cos(ang)*820, vy: Math.sin(ang)*820,
-          dmg: authoritative ? h.dmg*3*p.mods.dmg : 0, owner: p.id,
+          dmg: authoritative ? h.dmg*1*p.mods.dmg : 0, owner: p.id,
           color: '#ffd166', radius: 14, life: 1.4, piercing: 99,
           ghost: !authoritative,
         });
