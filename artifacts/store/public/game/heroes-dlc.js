@@ -516,7 +516,7 @@
         spawnBullet({
           x: p.x+Math.cos(ang)*20, y: p.y+Math.sin(ang)*20,
           vx: Math.cos(ang)*820, vy: Math.sin(ang)*820,
-          dmg: authoritative ? h.dmg*9*p.mods.dmg : 0, owner: p.id,
+          dmg: authoritative ? h.dmg*3*p.mods.dmg : 0, owner: p.id,
           color: '#ffd166', radius: 14, life: 1.4, piercing: 99,
           ghost: !authoritative,
         });
