@@ -33,6 +33,11 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api", router);
 
+// Make the game the landing page: redirect "/" -> "/game/".
+app.get("/", (_req, res) => {
+  res.redirect(302, "/game/");
+});
+
 // In production, this same Express server also serves the built React
 // storefront and the static game assets. The build step puts the storefront
 // build at `artifacts/store/dist/public/` (which already includes the static
