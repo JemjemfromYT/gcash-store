@@ -540,7 +540,7 @@
             });
             state.fx.push({ x:tx, y:ty, vx:0,vy:0, life:0.3,life0:0.3, color:h.color, r:6 });
           }, i*70);
-        }
+        } 
         try { shake(4); } catch(_){}
         break;
       }
