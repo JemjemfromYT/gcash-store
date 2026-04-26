@@ -42,42 +42,42 @@
   const NEW_HEROES = {
     justin: {
       name: 'Justin', role: 'Mage Summoner',
-      img: svgPortrait('JU', '#b48fff'),
+      img: 'images/heroes/justin.jpg',
       hp: 110, speed: 210, dmg: 28, atkCd: 0.55, range: 480,
       abi: 'Spirit Beasts', abiCd: 12, color: '#b48fff',
       desc: 'Long-range arcane bolts that pierce. Q summons a swirling pack of spirit beasts that orbit and strike enemies.'
     },
     jian: {
       name: 'Jian', role: 'Laser Lance',
-      img: svgPortrait('JN', '#22e8ff'),
+      img: 'images/heroes/jian.jpg',
       hp: 95, speed: 225, dmg: 55, atkCd: 0.55, range: 540,
       abi: 'Overcharge', abiCd: 9, color: '#22e8ff',
       desc: 'Hitscan laser lance — instant beam to your aim. Q overcharges into a wide, piercing megabeam.'
     },
     joseph: {
       name: 'Joseph', role: 'Reaper',
-      img: svgPortrait('JO', '#a020f0'),
+      img: 'images/heroes/joseph.jpg',
       hp: 170, speed: 215, dmg: 48, atkCd: 0.55, range: 90,
       abi: 'Soul Harvest', abiCd: 8, color: '#a020f0',
       desc: 'Heavy melee scythe with a wide cleave arc. Q rips souls from all nearby enemies, healing for each kill.'
     },
     jaballas: {
       name: 'Jaballas', role: 'Shotgunner',
-      img: svgPortrait('JB', '#ff5577'),
+      img: 'images/heroes/jaballas.jpg',
       hp: 140, speed: 210, dmg: 16, atkCd: 0.65, range: 300,
       abi: 'Slug Round', abiCd: 7, color: '#ff5577',
       desc: '6-pellet shotgun spread shreds at close range. Q fires a heavy slug round that pierces every enemy in a line.'
     },
     joshua: {
       name: 'Joshua', role: 'Marksman Archer',
-      img: svgPortrait('JS', '#3dffb0'),
+      img: 'images/heroes/joshua.jpg',
       hp: 100, speed: 230, dmg: 78, atkCd: 0.7, range: 760,
       abi: 'Arrow Volley', abiCd: 9, color: '#3dffb0',
       desc: 'Long-range high-damage arrows. Q rains a 12-arrow volley around your aim point.'
     },
     jazmine: {
       name: 'Jazmine', role: 'Plasma Witch',
-      img: svgPortrait('JZ', '#ff80df'),
+      img:'images/heroes/jazmine.jpg',
       hp: 100, speed: 220, dmg: 22, atkCd: 0.12, range: 460,
       abi: 'Plasma Storm', abiCd: 8, color: '#ff80df',
       desc: 'Rapid-fire plasma orbs at incredible attack speed. Q releases a 16-orb plasma storm in a wide ring.'
