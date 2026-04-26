@@ -50,35 +50,35 @@
     jian: {
       name: 'Jian', role: 'Laser Lance',
       img: 'images/heroes/jian.jpg',
-      hp: 95, speed: 225, dmg: 55, atkCd: 0.55, range: 540,
+      hp: 95, speed: 225, dmg: 2, atkCd: 0, range: 540,
       abi: 'Overcharge', abiCd: 9, color: '#22e8ff',
       desc: 'Hitscan laser lance — instant beam to your aim. Q overcharges into a wide, piercing megabeam.'
     },
     joseph: {
       name: 'Joseph', role: 'Reaper',
       img: 'images/heroes/joseph.jpg',
-      hp: 170, speed: 215, dmg: 48, atkCd: 0.55, range: 90,
+      hp: 400, speed: 250, dmg: 48, atkCd: 0.55, range: 260,
       abi: 'Soul Harvest', abiCd: 8, color: '#a020f0',
       desc: 'Heavy melee scythe with a wide cleave arc. Q rips souls from all nearby enemies, healing for each kill.'
     },
     jaballas: {
       name: 'Jaballas', role: 'Shotgunner',
       img: 'images/heroes/jaballas.jpg',
-      hp: 140, speed: 210, dmg: 16, atkCd: 0.65, range: 300,
+      hp: 140, speed: 210, dmg: 50, atkCd: 1.5, range: 300,
       abi: 'Slug Round', abiCd: 7, color: '#ff5577',
       desc: '6-pellet shotgun spread shreds at close range. Q fires a heavy slug round that pierces every enemy in a line.'
     },
     joshua: {
       name: 'Joshua', role: 'Marksman Archer',
       img: 'images/heroes/joshua.jpg',
-      hp: 100, speed: 230, dmg: 78, atkCd: 0.7, range: 760,
+      hp: 100, speed: 230, dmg: 78, atkCd: 0.9, range: 760,
       abi: 'Arrow Volley', abiCd: 9, color: '#3dffb0',
       desc: 'Long-range high-damage arrows. Q rains a 12-arrow volley around your aim point.'
     },
     jazmine: {
       name: 'Jazmine', role: 'Plasma Witch',
       img:'images/heroes/jazmine.jpg',
-      hp: 100, speed: 220, dmg: 22, atkCd: 0.12, range: 460,
+      hp: 100, speed: 120, dmg: 130, atkCd: 0.12, range: 460,
       abi: 'Plasma Storm', abiCd: 8, color: '#ff80df',
       desc: 'Rapid-fire plasma orbs at incredible attack speed. Q releases a 16-orb plasma storm in a wide ring.'
     },
@@ -397,8 +397,8 @@
         break;
       }
       case 'jaballas': {
-        // Shotgun — 6 pellets in a 30-degree cone
-        const pellets = 6, spread = 0.5;
+        // Shotgun — 9 pellets in a 60-degree cone
+        const pellets = 9, spread = 0.6;
         for (let i=0;i<pellets;i++){
           const a = ang + (i/(pellets-1) - 0.5) * spread;
           spawnBullet({
