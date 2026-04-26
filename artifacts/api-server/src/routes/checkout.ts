@@ -44,7 +44,7 @@ router.post("/create-checkout", async (req, res) => {
               quantity: 1,
             },
           ],
-          payment_method_types: ["gcash", "card", "paymaya"],
+          payment_method_types: ["qrph", "gcash", "card", "paymaya"],
           success_url: `${origin}/success?paid=true`,
           cancel_url: `${origin}/cancel`,
           description: itemName,
